@@ -1,0 +1,50 @@
+@import "variables";
+
+.page-navigation {
+	width: 50px;
+	background-color: $color-darkest;
+	color: $color-lightest;
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1;
+
+	nav {
+		height: 100%;
+		flex: 1 0 auto;
+	}
+
+	.header {
+		margin-bottom: 2em;
+		h3 {
+			padding: 0 1em;
+			margin-top: 1em;
+			font-size: 12px;
+		}
+	}
+
+	a.nav-link {
+		flex: 0 1 40px;
+		height: 40px;
+		position: relative;
+		color: $color-light;
+		transition: all $transition-speed;
+		background-color: $color-darkest;
+		&:hover {
+			background-color: $color-dark;
+		}
+		&.active {
+			background-color: $color-theme;
+		}
+		&.end {
+			margin-top: 30px;
+		}
+	}
+
+	.badge {
+		position: absolute;
+		top: 10px;
+		right: -10px;
+	}
+
+
+}

@@ -1,0 +1,125 @@
+@import "variables";
+
+.page-wrapper {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: $footer-height;
+	padding-top: $header-height;
+	background-color: $color-default-bg;
+
+
+	@media screen and (max-width: $mq-sm) {
+		padding-bottom: 0;
+	}
+
+	footer {
+		height: $footer-height;
+		display: flex;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: 14px;
+		width: 100%;
+		padding: 50px 0 0 0;
+		color: $color-light;
+		background-color: $color-darkest;
+
+		@media screen and (max-width: $mq-sm) {
+			height: auto;
+			font-size: smaller;
+			position: relative;
+		}
+
+		a {
+			color: $color-light;
+			text-decoration: underline;
+		}
+
+		.phone {
+			line-height: 2em;
+			opacity: 1;
+			.number {
+				font-weight: 600;
+				font-size: 30px;
+				@media screen and (max-width: $mq-md) {
+					font-size: 20px;
+				}
+				@media screen and (max-width: $mq-sm) {
+					font-size: 15px;
+				}
+				a {
+					text-decoration: none;
+				}
+				span {
+					opacity: .4;
+					font-weight: 100;
+				}
+			}
+		}
+
+		.messengers {
+			padding-top: 1em;
+			line-height: 1.6em;
+			opacity: 1;
+			.number {
+				font-weight: 600;
+				font-size: 16px;
+				@media screen and (max-width: $mq-sm) {
+					font-size: 12px;
+				}
+				a {
+					text-decoration: none;
+				}
+				span {
+					opacity: .4;
+					font-weight: 100;
+				}
+			}
+		}
+
+		.social-footer {
+			margin-top: 2em;
+			a {
+				font-size: 20px;
+				padding-right: 20px;
+				@media screen and (max-width: $mq-md) {
+					font-size: 15px;
+					padding-right: 10px;
+				}
+				@media screen and (max-width: $mq-sm) {
+					font-size: 12px;
+					padding-right: 8px;
+				}
+				opacity: .3;
+				transition: all $transition-speed;
+				color: $color-white;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+#toTopButton {
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	z-index: 99999;
+	opacity: .3;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	font-size: smaller;
+	background-color: $color-orange;
+	color: white;
+	cursor: pointer;
+	padding: 5px 10px;
+	border-radius: 3px;
+	transition: opacity $transition-speed;
+	&:hover {
+		opacity: 1;
+	}
+}

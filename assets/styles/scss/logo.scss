@@ -1,0 +1,38 @@
+@import "variables";
+
+.logo {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: flex-start;
+	align-items: center;
+	justify-content: flex-end;
+	&__link {
+		display: flex;
+		flex: 1 1;
+		flex-flow: row nowrap;
+		align-content: flex-start;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&__sign,
+	&__title	{
+		height: 28px;
+		color: $color-lightest;
+		fill: currentColor;
+		transition: color $transition-speed;
+	}
+	&__sign {
+		flex: 0 0 24%;
+	}
+	&__title {
+		flex: 1 1;
+		margin-left: -5%;
+	}
+	&:hover {
+		.logo__title,
+		.logo__sign {
+			color: $color-yellow;
+		}
+	}
+}

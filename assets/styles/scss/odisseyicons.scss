@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'odisseyicons';
+  src: url('../../../assets/icons/font/odisseyicons.eot?28859730');
+  src: url('../../../assets/icons/font/odisseyicons.eot?28859730#iefix') format('embedded-opentype'),
+       url('../../../assets/icons/font/odisseyicons.woff2?28859730') format('woff2'),
+       url('../../../assets/icons/font/odisseyicons.woff?28859730') format('woff'),
+       url('../../../assets/icons/font/odisseyicons.ttf?28859730') format('truetype'),
+       url('../../../assets/icons/font/odisseyicons.svg?28859730#odisseyicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'odisseyicons';
+    src: url('../font/odisseyicons.svg?28859730#odisseyicons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "odisseyicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-attention:before { content: '\e800'; } /* '' */
+.icon-asterisk:before { content: '\e801'; } /* '' */
+.icon-star-empty:before { content: '\e802'; } /* '' */
+.icon-star:before { content: '\e803'; } /* '' */
+.icon-user:before { content: '\e804'; } /* '' */
+.icon-location:before { content: '\e805'; } /* '' */
+.icon-phone:before { content: '\e806'; } /* '' */
+.icon-mail:before { content: '\e807'; } /* '' */
+.icon-eye:before { content: '\e808'; } /* '' */
+.icon-basket:before { content: '\e809'; } /* '' */
+.icon-print:before { content: '\e80a'; } /* '' */
+.icon-ok-circled:before { content: '\e80b'; } /* '' */
+.icon-attention-circled:before { content: '\e80c'; } /* '' */
+.icon-left-open:before { content: '\e80d'; } /* '' */
+.icon-right-open:before { content: '\e80e'; } /* '' */
+.icon-viber:before { content: '\e80f'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-gplus:before { content: '\f0d5'; } /* '' */
+.icon-sort:before { content: '\f0dc'; } /* '' */
+.icon-sort-down:before { content: '\f0dd'; } /* '' */
+.icon-sort-up:before { content: '\f0de'; } /* '' */
+.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-angle-up:before { content: '\f106'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */
+.icon-spinner:before { content: '\f110'; } /* '' */
+.icon-rouble:before { content: '\f158'; } /* '' */
+.icon-vkontakte:before { content: '\f189'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */
+.icon-yandex:before { content: '\f305'; } /* '' */
+.icon-chart-bar:before { content: '\f526'; } /* '' */

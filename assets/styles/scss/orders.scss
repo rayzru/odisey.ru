@@ -1,0 +1,8 @@
+@import "variables";
+
+.orders {
+	&__item {
+		border-top: 1px solid $color-lightest;
+		line-height: 2em;
+	}
+}

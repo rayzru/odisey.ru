@@ -1,0 +1,47 @@
+@import "variables";
+@import "mixin";
+
+.interact-box {
+	height: 130px;
+	&__wrapper {
+		background-color: $color-default-bg;
+		background-size: contain;
+		height: 130px;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		transition: height $transition-speed, background-color $transition-speed;
+		&.affix {
+			background-color: $color-white;
+			height: 80px;
+			box-shadow: 0 3px 5px rgba(0,0,0,.2);
+			position: absolute;
+			z-index: 1000;
+		}
+	}
+	.container {
+		height: 130px;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		@media screen and (max-width: $mq-sm) {
+
+		}
+	}
+	&--slim .container {
+		height: 80px;
+	}
+
+	.search-form {
+		flex: 1;
+	}
+	.cabinet-nav {
+		flex: 0 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.interact-box__wrapper.affix {
+		position: static;
+	}
+}

@@ -1,0 +1,62 @@
+@import "variables";
+
+.owl-carousel {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 70px;
+			left: 0;
+			font-size: 30px;
+			display: block;
+			width: 0 !important;
+			color: transparent;
+			visibility: hidden;
+			background-color: transparent;
+
+			&:before {
+				visibility: visible;
+				font-family: "odisseyicons";
+				font-style: normal;
+				font-weight: normal;
+				speak: none;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				text-decoration: inherit;
+				width: 1em;
+				margin-right: .2em;
+				color: $color-dark;
+				text-align: center;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1em;
+				margin-left: .2em;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+		.owl-prev {
+			left: -22px !important;
+			right: auto !important;
+			&:before {
+				content: '\f104';
+			}
+		}
+		.owl-next {
+			left: auto !important;
+			right: 0 !important;
+			&:before {
+				content: '\f105';
+			}
+		}
+	}
+}
+
+.owl-page > span {
+	width: 4px !important;
+	height: 4px !important;
+	background-color: $color-dark !important;
+	opacity: .2;
+}

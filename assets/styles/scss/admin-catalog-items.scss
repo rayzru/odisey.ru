@@ -1,0 +1,39 @@
+body.dragging, body.dragging * {
+	cursor: move !important;
+}
+
+.dragged {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2000;
+}
+
+#itemsTable tr.placeholder {
+	position: relative;
+	display: block;
+	background: transparent;
+	margin: 0;
+}
+
+#itemsTable tr.placeholder:before {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-left-color: darkblue;
+	margin-top: -10px;
+	left: -10px;
+	border-right: none;
+}
+
+.feature-value {
+
+}
+
+.select2.category + .select2-container {
+	display: block;
+	.select2-selection {
+		line-height: 33px;
+	}
+}

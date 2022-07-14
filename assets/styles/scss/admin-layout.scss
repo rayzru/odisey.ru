@@ -1,0 +1,96 @@
+@import "variables";
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.page-wrapper {
+	height: 100%;
+	width: 100%;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-ms-box-orient: horizontal;
+	box-orient: horizontal;
+
+	.page-navigation {
+		-ms-flex: 0;
+		-webkit-box-flex:  0;
+		-moz-box-flex:  0;
+		-ms-box-flex:  0;
+		box-flex:  0;
+	}
+
+	.page-content {
+		-ms-flex: 1;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-box-flex: 1;
+		box-flex: 1;
+
+		height: 100%;
+		display: -ms-flexbox;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-box;
+		display: box;
+
+		-ms-flex-direction: row;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-ms-box-orient: horizontal;
+		box-orient: horizontal;
+
+		.catalog-tree {
+			-ms-flex: 0;
+			-webkit-box-flex:  0;
+			-moz-box-flex:  0;
+			-ms-box-flex:  0;
+			box-flex:  0;
+		}
+
+		.catalog-content {
+			-ms-flex: 1;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-ms-box-flex: 1;
+			box-flex: 1;
+		}
+	}
+
+}
+
+.catalog-content {
+	display: flex;
+	flex-flow: column nowrap;
+
+	&__header {
+		padding: 1em 20px 12px 20px;
+		background-color: $color-light;
+		flex: 0 0 auto;
+		border-bottom: 1px solid $color-light;
+		overflow: hidden;
+		h3 {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__data {
+		flex: 1;
+		position: relative;
+		padding: 1em 20px;
+		overflow-y: scroll;
+		display: flex;
+	}
+}

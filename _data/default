@@ -1,0 +1,68 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	rewrite ^/(.*) https://$server_name/$1 permanent;
+}
+
+server {
+	listen 443 ssl default_server;
+	listen [::]:443 ssl default_server;
+	ssl_session_timeout 30m;
+	ssl on;
+	include snippets/odisey.ru.conf;
+
+	root /var/www/odisey.ru;
+	charset utf-8;
+	
+	gzip on;
+	gzip_proxied any;
+	gzip_types text/plain text/xml text/css application/x-javascript;
+	gzip_vary on;
+	gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+
+	# Add index.php to the list if you are using PHP
+	index index.php index.html;
+
+	server_name odisey.ru;
+    
+	location / {
+	    try_files  $uri $uri/ /index.php?$query_string;
+	}
+
+        location ~ /catalog/viewItem/([0-9]+) {
+	    return 301 https://odisey.ru/catalog/p$1-;
+	}
+
+        location ~ /catalog/(viewItems|viewCategory)/([0-9]+) {
+	    return 301 https://odisey.ru/catalog/$2-;
+        }
+
+	location ~ /news/([0-9]+) {
+	    return 301 https://odisey.ru/feed/$2-;
+	}
+
+        location /assets/images/catalog/_cache/ {
+    	    try_files $uri @resize;
+	    add_header Cache-Control public;
+	    expires 1y;
+	    log_not_found off;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+		fastcgi_split_path_info         ^(.+\.php)(.*)$;
+		fastcgi_param                   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+
+	}
+
+	location @resize {
+    	    rewrite ^(.*)$ /index.php?$1;
+	    include snippets/fastcgi-php.conf;
+	    fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location ~ /\.ht {
+		deny all;
+	}
+}

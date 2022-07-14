@@ -1,0 +1,14 @@
+Host: https://odisey.ru
+Sitemap: https://odisey.ru/sitemap.xml
+User-agent: *
+Disallow: /admin
+Disallow: /my
+Disallow: /search
+Disallow: /?order=-price
+Disallow: /?order=-rating
+Disallow: /?order=-title
+Disallow: /?order=-votes
+Disallow: /?order=price
+Disallow: /?order=rating
+Disallow: /?order=title
+Disallow: /?order=votes

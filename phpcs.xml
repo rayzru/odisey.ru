@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ruleset name="OdisseyRuleset">
+    <description></description>
+
+    <!-- EXCLUDES -->
+    <!-- General -->
+    <exclude-pattern>\.git</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>components/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>logs/*</exclude-pattern>
+    <exclude-pattern>backups/*</exclude-pattern>
+    <exclude-pattern>assets/*</exclude-pattern>
+
+    <arg name="tab-width" value="4"/>
+    <rule ref="PSR2">
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+        <exclude name="Generic.Formatting.MultipleStatementAlignment" />
+    </rule>
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.Formatting.MultipleStatementAlignment">
+        <properties>
+            <property name="maxPadding" value="0"/>
+            <property name="ignoreMultiLine" value="true"/>
+            <property name="error" value="false"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+
+    <!-- Lines can be 140 chars long, but never show errors -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="140"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- Use Unix newlines -->
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+
+    <!-- Have 20 chars padding maximum and always show as errors -->
+    <rule ref="Generic.Formatting.MultipleStatementAlignment">
+        <properties>
+            <property name="maxPadding" value="20"/>
+            <property name="error" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- Ban some functions -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count"/>
+                <element key="delete" value="unset"/>
+                <element key="print" value="echo"/>
+                <element key="is_null" value="null"/>
+                <element key="create_function" value="null"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- We allow empty catch statements -->
+    <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedCATCH">
+        <severity>0</severity>
+    </rule>
+</ruleset>

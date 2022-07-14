@@ -1,0 +1,39 @@
+@import "../../../node_modules/owl.carousel/src/scss/owl.carousel";
+@import "../../../node_modules/owl.carousel/src/scss/owl.theme.default";
+
+@import "../../../vendor/twbs/bootstrap/scss/bootstrap";
+@import "bootstrap";
+
+@import "odisseyicons";
+@import "variables";
+
+@import "base";
+@import "logo";
+@import "layout";
+@import "navigation";
+@import "interact-box";
+@import "cabinet-nav";
+@import "search";
+@import "search-terms";
+@import "mainpage";
+@import "slider-product";
+@import "catalog-categories";
+@import "catalog-items";
+@import "catalog-item";
+@import "catalog-sidebar";
+@import "catalog-comparison";
+@import "contacts";
+@import "cart";
+@import "orders";
+@import "profile";
+@import "promo";
+@import "print";
+
+body, html {
+	font-family: $font-family-base;
+}
+
+a {
+	color: $color-theme-darken;
+	transition: color $transition-speed;
+}

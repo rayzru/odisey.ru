@@ -1,0 +1,1 @@
+mysqldump --host=localhost --routines --databases odissey_migrate > odissey_dump.sql

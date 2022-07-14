@@ -1,0 +1,70 @@
+@import "variables";
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-height: 100%;
+	font-family: $font-family-base;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h1 {
+	font-family: $font-family-alt;
+	letter-spacing: -.04em;
+}
+
+h1.page-title {
+	margin: 1em 0 .4em;
+    font-size: 2rem;
+	font-family: $font-family-alt;
+}
+
+h4.subheader {
+	font-family: $font-family-alt;
+	margin: 1.3em 0 .4em;
+}
+
+a {
+	color: $color-link;
+	&:hover {
+		color: $color-link-hover;
+	}
+}
+
+.meta {
+	margin: 1em 0;
+	display: block;
+	color: #757575;
+}
+
+h1.page-title + .meta {
+	margin-top: 0;
+}
+
+h4.underline {
+	border-bottom: 1px solid $color-light;
+}
+
+.nested-lists {
+	ol {
+		counter-reset: item;
+	}
+
+	li {
+		display: block;
+	}
+
+	li:before {
+		content: counters(item, ".") " ";
+		counter-increment: item;
+	}
+}
+
+.lb-container {
+	padding: 50px;
+}
+.lb-caption {
+	font-size: 16px !important;
+}

@@ -1,0 +1,40 @@
+@import "variables";
+
+
+.btn-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+
+.btn-delete-image,
+.btn-default-image {
+
+}
+
+.default-image {
+	border: 1px solid $color-theme;
+}
+
+.images-container {
+	position: relative;
+	align-self: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+
+	&__image {
+		height: 210px;
+		position: relative;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.textareaprogress {
+	position: relative;
+	textarea {
+		border-radius: 0;
+	}
+}

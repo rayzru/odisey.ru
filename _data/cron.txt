@@ -1,0 +1,5 @@
+0 3 * * * cd /var/www/odisey.ru/app/services;php indexer.php
+0 4 * * * cd /var/www/odisey.ru/app/services;php indexer-admin.php
+0 2 * * * /var/www/odisey.ru/app/services/mysqlDump.sh
+0 5 * * 4 cd /var/www/odisey.ru;php app/services/sitemap.php
+30 6 * * 5 cd /var/www/odisey.ru;php app/services/yml.php

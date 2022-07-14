@@ -1,0 +1,96 @@
+@import "variables";
+
+.slider-product {
+	height: 340px;
+	width: 250px;
+	border: none;
+	&__image-link {
+		padding: 20px;
+		height: 200px;
+	}
+	&__image {
+		margin: 0 auto;
+		height: 100% !important;
+		width: auto !important;
+	}
+
+	&__title {
+		font-size: 14px;
+		a {
+			color: $color-darkest;
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-decoration: none;
+		}
+	}
+
+	&__price {
+		color: $color-orange;
+		font-weight: 700;
+		.icon-rouble {
+			font-size: smaller;
+			color: $color-mid;
+			margin-left: -2px;
+		}
+	}
+
+	&__rating {
+		color: $color-lightest;
+		&--active {
+			color: $color-orange;
+		}
+	}
+
+	&__stock {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+	}
+
+	&__votes {
+		color: $color-light;
+	}
+
+	&__badges {
+		position: absolute;
+		z-index: 2;
+		left: 20px;
+		top: 190px;
+		font-size: 11px;
+		text-transform: uppercase;
+		font-family: $font-family-alt;
+	}
+
+	&__badge {
+		clear: both;
+		background-color: $gray-200;
+		color: $color-darkest;
+		display: inline-block;
+		padding: 0 5px;
+		letter-spacing: -.03em;
+		line-height: 20px;
+
+		&:after {
+			content: ' ';
+			position: absolute;
+			width: 0;
+			height: 0;
+			left: 0;
+			margin-bottom: -22px;
+			margin-right: 0px;
+			top: -5px;
+			border-width: 3px 3px;
+			border-style: solid;
+			border-color: transparent transparent $color-light $color-light ;
+		}
+	}
+
+}
+
+.owl-item, .owl-stage {
+	width: 100px;
+	transition: width $transition-speed;
+	overflow: hidden;
+}

@@ -1,0 +1,11 @@
+@import "variables";
+
+.price-discounted {
+	text-decoration: line-through;
+	color: red;
+}
+
+.promo-items {
+	max-height: 300px;
+	overflow-y: auto;
+}

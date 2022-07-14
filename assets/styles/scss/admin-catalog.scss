@@ -1,0 +1,118 @@
+.catalog-tree {
+	background-color: $color-dark;
+	width: 300px;
+	display: flex;
+	flex-flow: column nowrap;
+
+	.admin-catalog-search {
+		flex: 0 30px;
+	}
+
+	.admin-catalog-tools {
+		flex: 0 30px;
+		a {
+			padding: 1em;
+			color: $color-white;
+		}
+	}
+
+	.admin-catalog-tree {
+		padding-right: 5px;
+		flex: 1;
+		display: flex;
+		flex-flow: column nowrap;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: lighten($color-dark, 50%);
+		}
+		&::-webkit-scrollbar-track {
+			background: lighten($color-dark, 30%);
+		}
+
+		.main-catalog-link {
+			display: block;
+			color: $color-white;
+			margin: 0 10px;
+			line-height: 20px;
+			font-size: 14px;
+			padding: 2px 5px;
+			&:hover {
+				text-decoration: none;
+				background-color: #308ed8;
+			}
+		}
+	}
+}
+
+#tree {
+	overflow-x: hidden;
+	position: relative;
+	flex: 1;
+}
+
+.admin-catalog-search {
+	padding: 10px;
+	&__input {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid $color-mid;
+		outline: none;
+		width: 100%;
+		color: $color-white;
+		padding: 0 10px;
+		line-height: 30px;
+		height: 30px;
+	}
+}
+
+ul.fancytree-container {
+	width: 300px;
+	outline: none !important;
+	overflow: hidden;
+	padding: 0 0 0 10px !important;
+	background-color: transparent !important;
+	border: none !important;
+	color: #fff;
+
+	.fancytree-title {
+		color: #fff;
+	}
+
+	.fancytree-node {
+		border: none !important;
+
+		&:hover {
+			background-color: darken($color-mid, 10%) !important;
+		}
+		&.fancytree-active {
+			background-color: $color-mid !important;
+		}
+
+		&.fancytree-selected {
+			background-color: $color-theme !important;
+		}
+	}
+}
+
+.dragCursor {
+	cursor: move;
+}
+
+.catalog-items {
+	&__stock {
+		color: $color-mid;
+		&--none {
+			color: $color-mid;
+		}
+		&--stock {
+			color: $color-green;
+		}
+		&--order {
+			color: $color-yellow;
+		}
+	}
+}

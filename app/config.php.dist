@@ -1,0 +1,88 @@
+<?php
+
+use Hybridauth\HttpClient;
+
+class Configuration
+{
+
+	// Database
+	const DATABASE_HOST = '127.0.0.1';
+	const DATABASE_DB = 'odissey_migrate';
+	const DATABASE_USER = 'root';
+	const DATABASE_PASS = '';
+
+	const TEMPLATE_CACHE = 'tmp';
+	const TEMPLATE_DIR = 'app/views';
+	const TEMPLATE_ID = 'frontend';
+
+	const GOOGLEAPI_MAPS_KEY = 'AIzaSyAJObzI54NQbvh1BPxGqy_rl1g8AjWbxGQ';
+	const GOOGLEAPI_RECAPTCHA_SITEKEY = '6LcaQyAUAAAAAEdjqRIe0d9mbRgazUs03JZ0jMoF';
+	const GOOGLEAPI_RECAPTCHA_SECRETKEY = '6LcaQyAUAAAAAAx6U79RrzoWA4EYLlqy1F893zDn';
+
+	const SEARCH_CACHE = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'tmp';
+
+	// Development purposes
+	const DEBUG = false;
+
+	const MAIL_FROM = 'noreply@odisey.ru';
+
+	/*
+	const MAIL_SMTP_USER = 'noreply@odisey.ru';
+	const MAIL_SMTP_PASS = '';
+	const MAIL_SMTP_HOST = 'mail.nic.ru';
+	const MAIL_SMTP_PORT = 465;
+	const MAIL_SMTP_SECURE = 'ssl';
+	const MAIL_SMTP_AUTH = true;
+	const MAIL_NOTIFY = ['info@odisey.ru', 'oksana@odisey.ru'];
+	*/
+
+	const MAIL_SMTP_USER = 'rayz@rayz.ru';
+	const MAIL_SMTP_PASS = '';
+	const MAIL_SMTP_HOST = 'smtp.gmail.com';
+	const MAIL_SMTP_PORT = 587;
+	const MAIL_SMTP_SECURE = 'tls';
+	const MAIL_SMTP_AUTH = true;
+	const MAIL_NOTIFY = ['rayz@rayz.ru'];
+
+	public static function hybridAuthConfig() {
+
+		return [
+			"callback" =>  Helpers::getCurrentURL(),
+			"providers" => [
+				"Google" => [
+					"enabled" => true,
+					"keys" => [
+						"id" => "578202081831-dkvf84jcthc1oh7c0crvva90pqeusi30.apps.googleusercontent.com",
+						"secret" => "Q6T-G7wpf1zpWRrgee-s8oop"
+					],
+					 'scope' => 'profile https://www.googleapis.com/auth/plus.profile.emails.read',
+
+				],
+				"Vkontakte" => [
+					"enabled" => true,
+					"scope" => "email",
+					"keys" => ["id" => "5661330", "secret" => "0BNB9M6fZ0CJmpXa08ho"], // DEV
+					// "keys" => ["id" => "5661341", "secret" => "JoeHDS3Fupgfk48PDozU"] // PROD
+				],
+				"Facebook" => [
+					"enabled" => true,
+					'scope' => 'user:email',
+					"keys" => ["id" => "667292253419303", "secret" => "44b5b3aa62c55a36d88a8ad581549e68"], // DEV
+					//"keys" => array("id" => "667219030093292", "secret" => "3f3cfcca5b51a9cb8c083a9f6c53d5ad"), // PROD
+				],
+				"Twitter" => [
+					"enabled" => true,
+					"keys" => ["key" => "Gpd8TBCG2YSBlXILpN3FY5ZB3", "secret" => "YuTWrajOiTsJygeKopyZqZCvngy96lvs2TIkvmFrYFKocWCX1g"],
+					"includeEmail" => true
+				],
+				"Yandex" => [
+					"enabled" => true,
+					"keys" => ["id" => "d2673ff642a940cda7ec2d197a48e779", "secret" => "77ebb787defa4bf79a2c70e250b0647c"], // DEV
+					// "keys" => array("id" => "69f3fe77fabd44d0a4266c80c02f6225", "secret" => "51165028decf4de188d5af8695595672") // PROD
+				],
+			],
+			"debug_mode" => false,
+			"debug_file" => "",
+		];
+	}
+}

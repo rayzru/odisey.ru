@@ -1,0 +1,1 @@
+7z a _odissey.7z -x!.git -x!.idea -x!assets\images\catalog\*\ -x!node_modules -x!tmp\* -x!vendor -x!components -x!sitemap.xml* -x!yml-catalog.xml* -x!composer.lock -x!package.lock

@@ -1,0 +1,61 @@
+@import "variables";
+
+.promo-list {
+	display: flex;
+	flex-flow: row;
+	margin-left: -10px;
+	margin-right: -10px;
+	&__card {
+		flex: 1 0 200px;
+		border: none;
+		position: relative;
+		padding: 1em;
+		background-color: #fff;
+		min-width: 200px;
+		min-height: 200px;
+		margin: 10px;
+		box-shadow: 0 0 0 0 rgba(0,0,0,0);
+		transition: .3s all;
+		&:hover {
+			box-shadow: 0 2px 5px 0 rgba(68,68,68,0.39);
+			text-decoration: none;
+		}
+		&--inactive {
+			background-color: #efefef;
+			opacity: .7;
+		}
+	}
+
+	&__due {
+		&:before {
+			content: '';
+		}
+		background-color: $color-light;
+		color: $color-theme;
+		position: absolute;
+		font-size: 12px;
+		top: -13px;
+
+		display: inline-block;
+		padding: .3em 1em;
+
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 800;
+		margin-top: 2em;
+	}
+}
+
+.promo-list-old {
+	&__header {
+		margin: 3em 0 1em;
+	}
+}
+
+.promo {
+	&__subtitle {
+		margin: 3em 0 1em;
+	}
+
+}

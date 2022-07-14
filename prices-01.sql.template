@@ -1,0 +1,2 @@
+^([^\t].*)?\t(\d+)
+INSERT INTO catalog_items_prices (item_id, price) SELECT ci.id, $2 from catalog_items ci WHERE ci.articul = '$1' LIMIT 1;

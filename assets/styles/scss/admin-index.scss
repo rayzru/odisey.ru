@@ -1,0 +1,29 @@
+@import "../../../vendor/select2/select2/src/scss/core";
+@import "../../../vendor/twbs/bootstrap/scss/bootstrap";
+@import "bootstrap";
+@import "variables";
+@import "helpers";
+@import "admin-typeahead";
+@import "admin-layout";
+@import "admin-navigation";
+@import "admin-dashboard";
+@import "admin-catalog";
+@import "admin-catalog-forms";
+@import "admin-catalog-items";
+@import "admin-catalog-import";
+// @import "admin-tree";
+@import "admin-tree-unformatted";
+@import "admin-promo";
+
+body, html {
+	font-family: $font-family-base;
+}
+
+a {
+	color: $color-theme-darken;
+	transition: color $transition-speed;
+}
+
+.mce-branding-powered-by {
+	display: none;
+}

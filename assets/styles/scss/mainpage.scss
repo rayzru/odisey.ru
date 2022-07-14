@@ -1,0 +1,173 @@
+@import "variables";
+@import "mixin";
+
+.topCategories {
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: -10px;
+	margin-left: -10px;
+
+	&__item {
+		flex: 1 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		font-weight: 600;
+		font-size: 20px;
+		padding: 45px 20px 20px 20px;
+		color: $color-lightest;
+		border-radius: 4px;
+		margin: 10px;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:last-child {
+			flex:  0 1 ;
+			font-size: 40px;
+			text-align: center;
+			width: 20px;
+			background-color: $color-yellow;
+			padding-top: 32px;
+			.icon-angle-right {
+				margin-left: -26px;
+			}
+		}
+	}
+}
+
+.topCategory {
+	padding-bottom: 1em;
+	padding-top: 20px;
+
+	.card {
+		color: #fff;
+		height: 100%;
+		border-color: transparent;
+		overflow: hidden;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__title {
+		margin: 10px 0 30px 0;
+		font-size: 20px;
+		font-weight: 600;
+		a {
+			display: block;
+			padding: 25px;
+			color: $color-lightest;
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__last {
+		flex: 0 0 !important;
+		width: 70px !important;
+		a, h3 {
+			height: 100%;
+			display: block;
+		}
+		i:before {
+			margin-left: -28px;
+			font-size: 50px;
+		}
+		.card {
+			background-color: $color-yellow;
+		}
+	}
+
+	&__list {
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	&__list-item {
+		display: block;
+		list-style: none;
+		padding: .5em 0;
+		color: $color-dark;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-theme-darken;
+		}
+	}
+}
+
+#topItems {
+	margin-top: 1em;
+}
+
+#partners {
+	margin-top: 3em;
+	background-color: $color-lightest;
+	border-bottom: 1px solid $color-light;
+}
+
+#about {
+	background-color: $color-lightest;
+	padding: 2em 0;
+	color: $color-dark;
+
+	.logo-circle {
+		width: 60px;
+		height: 60px;
+		background-color: #fff;
+		border-radius: 50%;
+		padding: 10px;
+		color: $color-dark;
+		svg {
+			fill: currentColor;
+			width: auto;
+		}
+	}
+
+	a {
+		color: $color-mid;
+	}
+}
+
+.partnersLogos {
+	position: relative;
+	overflow: hidden;
+	height: 100px;
+	width: 100%;
+	.owl-item {
+		float: left;
+		filter: gray;
+		filter: grayscale(100%);
+		opacity: .6;
+		transition: all $transition-speed;
+		&:hover {
+			filter: none;
+			opacity: 1;
+		}
+	}
+	.owl-nav {
+		display: none;
+	}
+}
+
+#partnersLogos {
+	margin-top: 20px;
+}
+
+.atesy {
+	margin-top: 20px;
+	img {
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	a {
+		font-size: 13px;
+		color: #124C81;
+		line-height: normal;
+	}
+}

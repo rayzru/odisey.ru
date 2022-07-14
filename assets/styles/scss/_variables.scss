@@ -1,0 +1,38 @@
+$color-light: #EEEFF7;
+$color-lightest: lighten($color-light, 10%);
+$color-mid: #308ed8;
+$color-darkest: #192746;
+$color-dark: lighten($color-darkest, 10%);
+
+$color-theme: #1d5796;
+$color-theme-darken: darken($color-theme, 10%);
+
+$color-link: #308ed8;
+$color-link-hover: #d84e20;
+
+$color-orange: #F26101;
+$color-red: #a10101;
+$color-yellow: #f2b600;
+$color-green: #73a340;
+$color-navi: #2C858D;
+$color-white: #fff;
+
+$color-default-bg: #f8f7f6;
+$color-hilight-bg: #ffffff;
+
+$bg-dark: $color-darkest;
+
+$font-family-base: "Open Sans", sans-serif;
+$font-family-alt: "Exo 2", sans-serif;
+$font-family-sans: "Roboto Slab", sans-serif;
+
+$footer-height: 250px;
+$header-height: 52px;
+
+$transition-speed: .3s;
+
+
+$mq-xs: 480px;
+$mq-sm: 768px;
+$mq-md: 992px;
+$mq-lg: 1200px;

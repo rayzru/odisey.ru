@@ -1,0 +1,46 @@
+.card-columns-wrapper {
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+
+	@include media-breakpoint-down(sm) {
+		column-count: 1;
+	}
+	@include media-breakpoint-only(md) {
+		column-count: 2;
+	}
+	@include media-breakpoint-up(lg) {
+		column-count: 3;
+	}
+}
+
+.catalog-categories {
+	border: none;
+	background-color: transparent;
+	margin-bottom: 3em;
+
+	h3 {
+		margin: 0 0 .7em;
+		font-size: 23px;
+		a {
+			color: $color-darkest
+		}
+	}
+
+	.card {
+		padding-top: 300px;
+	}
+
+	.card-body {
+		> a {
+			color: $color-theme;
+			line-height: 1.2em;
+			transition: color $transition-speed;
+			&:hover {
+				color: $color-darkest;
+			}
+			&:not(:empty):not(:last-child):after {
+				content: ",";
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+@import "variables";
+
+@keyframes spinner {
+	to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	margin-left: -15px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	border-top-color: #07d;
+	animation: spinner .6s linear infinite;
+}
+
+.loading {
+	opacity: .2;
+	transition: opacity $transition-speed;
+}
+
+#loading {
+	position: absolute;
+	opacity: .7;
+	transition: opacity $transition-speed;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.spnr {
+	margin: 100px auto;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	.spnr-dot {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		&:before {
+			content: '';
+			display: block;
+			margin: 0 auto;
+			width: 15%;
+			height: 15%;
+			background-color: #333;
+			border-radius: 100%;
+			-webkit-animation: spnr-FadeDelay 1.2s infinite ease-in-out both;
+			animation: spnr-FadeDelay 1.2s infinite ease-in-out both;
+		}
+	}
+
+	.spnr-dot2 {
+		-webkit-transform: rotate(30deg);
+		-ms-transform: rotate(30deg);
+		transform: rotate(30deg);
+		&:before {
+			-webkit-animation-delay: -1.1s;
+			animation-delay: -1.1s;
+		}
+	}
+	.spnr-dot3 {
+		-webkit-transform: rotate(60deg);
+		-ms-transform: rotate(60deg);
+		transform: rotate(60deg);
+		&:before {
+			-webkit-animation-delay: -1s;
+			animation-delay: -1s;
+		}
+	}
+	.spnr-dot4 {
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+		&:before {
+			-webkit-animation-delay: -0.9s;
+			animation-delay: -0.9s;
+		}
+
+	}
+	.spnr-dot5 {
+		-webkit-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		transform: rotate(120deg);
+		&:before {
+			-webkit-animation-delay: -0.8s;
+			animation-delay: -0.8s;
+		}
+
+	}
+	.spnr-dot6 {
+		-webkit-transform: rotate(150deg);
+		-ms-transform: rotate(150deg);
+		transform: rotate(150deg);
+		&:before {
+			-webkit-animation-delay: -0.7s;
+			animation-delay: -0.7s;
+		}
+	}
+	.spnr-dot7 {
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+		&:before {
+			-webkit-animation-delay: -0.6s;
+			animation-delay: -0.6s;
+		}
+	}
+	.spnr-dot8 {
+		-webkit-transform: rotate(210deg);
+		-ms-transform: rotate(210deg);
+		transform: rotate(210deg);
+		&:before {
+			-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
+		}
+	}
+	.spnr-dot9 {
+		-webkit-transform: rotate(240deg);
+		-ms-transform: rotate(240deg);
+		transform: rotate(240deg);
+		&:before {
+			-webkit-animation-delay: -0.4s;
+			animation-delay: -0.4s;
+		}
+	}
+	.spnr-dot10 {
+		-webkit-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);
+		&:before {
+			-webkit-animation-delay: -0.3s;
+			animation-delay: -0.3s;
+		}
+	}
+	.spnr-dot11 {
+		-webkit-transform: rotate(300deg);
+		-ms-transform: rotate(300deg);
+		transform: rotate(300deg);
+		&:before {
+			-webkit-animation-delay: -0.2s;
+			animation-delay: -0.2s;
+		}
+	}
+	.spnr-dot12 {
+		-webkit-transform: rotate(330deg);
+		-ms-transform: rotate(330deg);
+		transform: rotate(330deg);
+		&:before {
+			-webkit-animation-delay: -0.1s;
+			animation-delay: -0.1s;
+		}
+
+	}
+
+}
+
+@-webkit-keyframes spnr-FadeDelay {
+	0%, 39%, 100% { opacity: 0; }
+	40% { opacity: 1; }
+}
+
+@keyframes spnr-FadeDelay {
+	0%, 39%, 100% { opacity: 0; }
+	40% { opacity: 1; }
+}

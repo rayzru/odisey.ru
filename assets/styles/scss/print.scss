@@ -1,0 +1,38 @@
+@media print {
+	#mainmenu,
+	#topCategories,
+	.interact-box,
+	.breadcrumb-item:first-child,
+	.breadcrumb-item:first-child:before,
+	.catalog-item__print,
+	.catalog-item__social,
+	.catalog-item__tabs,
+	.catalog-item__badges,
+	#reviewForm,
+	jdiv, footer {
+		display: none !important;
+	}
+
+	.catalog-item {
+		.card {
+			border: none;
+			padding: 0;
+			background: none;
+		}
+	}
+
+	.catalog-item__images {
+		display: block;
+	}
+
+	.catalog-item__specs {
+		border-bottom: 1px solid gray;
+	}
+	.page-wrapper {
+		padding: 1em !important;
+		background: none;
+		min-height: auto;
+	}
+
+
+}

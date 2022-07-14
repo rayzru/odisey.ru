@@ -1,0 +1,47 @@
+@import "variables";
+@import "typeahead";
+
+.search-form {
+	position: relative;
+	display: flex;
+	margin-right: 20px;
+
+	&__input {
+		padding-left: 10px;
+		flex: 1 0 30px;
+		border-radius: 0 !important;
+		outline: none;
+		padding-right: 30px;
+		border-width: 1px;
+		border-color: $color-yellow !important;
+		-webkit-box-shadow: inset 0 0 6px 2px rgba($color-yellow, .2);
+		-moz-box-shadow: inset 0 0 6px 2px rgba($color-yellow, .2);
+		box-shadow: inset 0 0 6px 2px rgba($color-yellow, .2);
+		transition: all $transition-speed;
+		&:focus {
+			-webkit-box-shadow: inset 0 0 0 2px rgba($color-yellow, .1);
+			-moz-box-shadow: inset 0 0 0 2px rgba($color-yellow, .1);
+			box-shadow: inset 0 0 0 2px rgba($color-yellow, .1);
+		}
+	}
+	&__submit {
+		position: absolute;
+		left: -9999px;
+	}
+	&__enter {
+		top: 0;
+		right: 0;
+		opacity: .3;
+		transition: .4s opacity;
+		cursor: pointer;
+		position: absolute;
+		width: 44px;
+		height: 50px;
+		display: block;
+		background: transparent url("/assets/images/enter-key-16.png") no-repeat center center;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+

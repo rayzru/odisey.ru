@@ -1,0 +1,41 @@
+@import "variables";
+
+$font-size-breadcrumb: .8em;
+
+.breadcrumb {
+	padding: 0 !important;
+	background-color: transparent !important;
+	&-item + &-item:before {
+		font-size: $font-size-breadcrumb;
+		color: lighten($color-mid, 20%);
+	}
+	&-item {
+		font-size: $font-size-breadcrumb;
+		a {
+			color: lighten($color-mid, 10%);
+			text-decoration: none;
+			&:hover {
+				color: $color-theme;
+			}
+		}
+	}
+}
+
+.breadcrumb + h1.page-title {
+	margin-top: 10px;
+}
+
+.navbar {
+	.nav-link {
+		white-space: nowrap;
+	}
+}
+
+.bg-lightest {
+	background-color: $color-lightest;
+}
+
+.bg-light {
+	background-color: $color-light;
+}
+

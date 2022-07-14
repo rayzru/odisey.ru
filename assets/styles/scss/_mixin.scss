@@ -1,0 +1,77 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+	::-webkit-scrollbar {
+		width:  $size;
+		height: $size;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+	}
+
+	::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+
+	// For Internet Explorer
+	body {
+		scrollbar-face-color: $foreground-color;
+		scrollbar-track-color: $background-color;
+	}
+}
+
+@mixin tabs() {
+	.nav-tabs {
+		border-color: $color-lightest;
+	}
+	.nav-link {
+		border: none;
+		padding: 0 20px 0 0;
+		position: relative;
+		font-size: 18px;
+		line-height: 2em;
+		height: 2em;
+		margin-bottom: 0;
+		color: $color-mid;
+		display: block;
+		&:before {
+			content: " ";
+			position: absolute;
+			background-color: $color-lightest;
+			bottom: 0;
+			right: 20px;
+			left: 0;
+			height: 1px;
+			display: block;
+			transition: all $transition-speed;
+			z-index: 11;
+		}
+		&:hover {
+			&:before {
+				background-color: $color-lightest;
+				bottom: -1px;
+				height: 3px;
+			}
+		}
+		&.active {
+			background-color: transparent;
+			color: $color-darkest;
+			&:before {
+				background-color: $color-darkest;
+				bottom: -1px;
+				height: 3px;
+			}
+		}
+	}
+}
+
+@mixin gradient($top, $bottom){
+	background: $top; /* Old browsers */
+	background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
